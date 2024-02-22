@@ -1,0 +1,18 @@
+# Deps
+node_modules/
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Dist
+dist/
+build/
+
+README.md
+
+# git
+.gitignore
+
+#logs
+logs
