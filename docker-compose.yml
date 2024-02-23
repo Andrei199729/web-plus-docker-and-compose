@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     image: backend
     env_file:
-      - ./.env
+      - ./.env.example
     restart: always
     ports:
       - "4000:3000"
@@ -25,14 +25,14 @@ services:
     image: frontend
     restart: always
     ports:
-      - "8081:80"
+      - "3005:80"
 
   postgres:
     container_name: database
     image: postgres:15-alpine
     restart: always
     env_file:
-      - ./.env
+      - ./.env.example
     ports:
       - "5432:5432"
     volumes:
@@ -42,7 +42,6 @@ services:
 
 volumes:
   pg_data:
-    driver: local
 
 networks:
-  backend: {}
+  backend:
